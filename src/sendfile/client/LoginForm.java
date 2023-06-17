@@ -73,9 +73,9 @@ public class LoginForm extends javax.swing.JFrame {
         txtPort.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         txtPort.setText("3333");
 
-        jButton1.setBackground(new java.awt.Color(255, 153, 153));
+        jButton1.setBackground(new java.awt.Color(0, 0, 0));
         jButton1.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(0, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ĐĂNG NHẬP");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,7 +83,7 @@ public class LoginForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rabiit.png"))); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/sendfile/server/2.png"))); // NOI18N
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -150,6 +150,7 @@ public class LoginForm extends javax.swing.JFrame {
     private void txtHostActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtHostActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtHostActionPerformed
+
     /*  Kết nối đến Server    */
     private void connectToServer(){
         if(txtHost.getText().length() > 0 && txtPort.getText().length() > 0 && txtUsername.getText().length() > 0){
@@ -157,6 +158,7 @@ public class LoginForm extends javax.swing.JFrame {
                 /*   xóa Username  */
                 String username = txtUsername.getText();
                 String u = username.replace(" ", "_");
+
                 /*  Hiện thị MainForm  */
                 MainForm main = new MainForm();
                 main.initFrame(u, txtHost.getText(), Integer.parseInt(txtPort.getText()));
@@ -166,23 +168,19 @@ public class LoginForm extends javax.swing.JFrame {
                     main.setVisible(true);
                     setVisible(false);
                 }
-            } else {
-                JOptionPane.showMessageDialog(this, "Tài khoản phải tối đa 15 ký tự bao gồm [khoảng trắng].!", "Lỗi", JOptionPane.ERROR_MESSAGE);
-            }
-        } else {
-            JOptionPane.showMessageDialog(this, "Chưa hoàn thành Form.!", "Lỗi", JOptionPane.ERROR_MESSAGE);
-        }
+              
+    } else {
+        JOptionPane.showMessageDialog(this, "Tài khoản phải tối đa 15 ký tự bao gồm [khoảng trắng].!", "Lỗi", JOptionPane.ERROR_MESSAGE);
+    }
+} else {
+    JOptionPane.showMessageDialog(this, "Chưa hoàn thành Form.!", "Lỗi", JOptionPane.ERROR_MESSAGE);
+}
     }
     
     /**
      * @param args the command line arguments
      */
     public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
                 if ("Nimbus".equals(info.getName())) {
@@ -220,4 +218,5 @@ public class LoginForm extends javax.swing.JFrame {
     private javax.swing.JTextField txtPort;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
+
 }

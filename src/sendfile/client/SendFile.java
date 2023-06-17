@@ -176,8 +176,8 @@ public class SendFile extends javax.swing.JFrame {
             }
         });
 
-        btnBrowse.setBackground(new java.awt.Color(255, 153, 153));
-        btnBrowse.setForeground(new java.awt.Color(0, 0, 0));
+        btnBrowse.setBackground(new java.awt.Color(255, 51, 51));
+        btnBrowse.setForeground(new java.awt.Color(51, 0, 51));
         btnBrowse.setText("Tìm File");
         btnBrowse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         btnBrowse.addActionListener(new java.awt.event.ActionListener() {
@@ -190,8 +190,8 @@ public class SendFile extends javax.swing.JFrame {
 
         progressbar.setStringPainted(true);
 
-        btnSendFile.setBackground(new java.awt.Color(255, 153, 153));
-        btnSendFile.setForeground(new java.awt.Color(0, 0, 0));
+        btnSendFile.setBackground(new java.awt.Color(255, 0, 0));
+        btnSendFile.setForeground(new java.awt.Color(51, 0, 0));
         btnSendFile.setText("Gửi File");
         btnSendFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -231,7 +231,7 @@ public class SendFile extends javax.swing.JFrame {
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnBrowse)
+                    .addComponent(btnBrowse, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(txtFile, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(23, 23, 23)
                 .addComponent(jLabel2)
@@ -241,7 +241,7 @@ public class SendFile extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSendFile, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(progressbar, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
         );
 
         pack();

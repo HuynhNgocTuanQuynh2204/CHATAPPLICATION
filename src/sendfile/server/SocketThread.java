@@ -14,8 +14,7 @@ import java.net.Socket;
 import java.util.StringTokenizer;
 
 /**
- *
- * @author hanhhoatranthi
+ 
  */
 public class SocketThread implements Runnable {
 
@@ -108,8 +107,7 @@ public class SocketThread implements Runnable {
                             main.appendMessage("[IOException]: Không thể gửi tin nhắn đến " + sendTo);
                         }
                         break;
-
-                    case "CMD_CHATALL":
+                        case "CMD_CHATALL":
                         /**
                          * CMD_CHATALL [from] [message] *
                          */
